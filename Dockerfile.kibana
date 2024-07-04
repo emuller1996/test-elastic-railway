@@ -1,0 +1,7 @@
+# Dockerfile.kibana
+
+FROM docker.elastic.co/kibana/kibana:7.13.4
+
+# Establecer variables de entorno necesarias
+ENV SERVER_NAME=kibana
+ENV ELASTICSEARCH_HOSTS=http://elasticsearch:9200

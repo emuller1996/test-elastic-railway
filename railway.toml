@@ -4,5 +4,4 @@
 [deploy]
   [deploy.service]
     name = "elasticsearch"
-    image = "elasticsearch:latest"
-    ports = [{ port = 9200, protocol = "tcp" }]
+    files = ["docker-compose.yml"]

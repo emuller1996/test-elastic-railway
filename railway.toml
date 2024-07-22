@@ -1,9 +1,8 @@
-# railway.toml
+[build]
+  builder = "Docker"
 
-[services.elasticsearch]
-  build = "./Dockerfile.elasticsearch"
-  run = "docker run --name elasticsearch -p 9200:9200 elasticsearch"
-
-[services.kibana]
-  build = "./Dockerfile.kibana"
-  run = "docker run --name kibana -p 5601:5601 kibana"
+[deploy]
+  [deploy.service]
+    name = "elasticsearch"
+    image = "elasticsearch:latest"
+    ports = [{ port = 9200, protocol = "tcp" }]
